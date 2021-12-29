@@ -43,6 +43,10 @@ class BetaPoisson(rv_discrete):
         m, p = params
         return -BetaPoisson().loglikelihood(self.y, m, p, q=.5)
 
+    def fit(self):
+        pass
+
+
 if __name__ == "__main__":
     p = BetaPoisson()
     y_sim = p.rvs(8.53, .68, .49, size=1000)
